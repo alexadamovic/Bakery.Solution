@@ -17,7 +17,16 @@ namespace Bakery.Models
 
     public int Deals()
     {
-      return 0;
+      int discountAmount = 1;
+      int discountOccurs = 0;
+      for (int i = 1; i <= Amount; i++ ) 
+      {
+        if (i % 3 == 0) 
+        {
+          discountOccurs += 1;
+        }
+      }
+      return discountOccurs * discountAmount;
     }
 
   }
