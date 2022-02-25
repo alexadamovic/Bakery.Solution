@@ -17,7 +17,7 @@ namespace Bakery.Models
 
     public int Deals()
     {
-      
+      return 0;
     }
   }
 }
