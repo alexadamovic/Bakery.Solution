@@ -11,7 +11,8 @@ namespace Bakery.Models
 
     public int GetPrice()
     {
-      return 0;
+      int pricePer = 2;
+      return pricePer * Amount;
     }
   }
 }
