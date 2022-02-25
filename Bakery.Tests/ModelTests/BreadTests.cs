@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Bakery.Models;
+using System;
 
 namespace Bakery.Tests
 {
@@ -50,5 +51,15 @@ namespace Bakery.Tests
       Assert.AreEqual(typeof(int), discount.GetType());
     }
 
+    [TestMethod]
+    public void Deals_ReturnsDiscountBasedOnAmount_Int()
+    {
+      int amount = 5;
+      int discountAmount = 5;
+      int discountOccurs = 1;
+      Bread testBread = new Bread(amount);
+      int discount = testBread.Deals();
+      Assert.AreEqual((discountAmount * discountOccurs), discount);
+    }
   }
 }
