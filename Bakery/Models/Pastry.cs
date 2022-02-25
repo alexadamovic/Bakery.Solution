@@ -14,5 +14,6 @@ namespace Bakery.Models
       int pricePer = 2;
       return pricePer * Amount;
     }
+
   }
 }
