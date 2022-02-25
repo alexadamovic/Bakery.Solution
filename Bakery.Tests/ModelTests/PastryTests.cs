@@ -46,8 +46,8 @@ namespace Bakery.Tests
     {
       int amount = 5;
       Pastry testPastry = new Pastry(amount);
-      int price = testPastry.Deals();
-      Assert.AreEqual(typeof(int), price.GetType());
+      int discount = testPastry.Deals();
+      Assert.AreEqual(typeof(int), discount.GetType());
     }
   }
 }

@@ -46,8 +46,9 @@ namespace Bakery.Tests
     {
       int amount = 5;
       Bread testBread = new Bread(amount);
-      int price = testBread.Deals();
-      Assert.AreEqual(typeof(int), price.GetType());
+      int discount = testBread.Deals();
+      Assert.AreEqual(typeof(int), discount.GetType());
     }
+
   }
 }
