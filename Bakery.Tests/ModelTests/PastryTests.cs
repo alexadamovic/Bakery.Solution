@@ -40,5 +40,14 @@ namespace Bakery.Tests
       int price = testPastry.GetPrice();
       Assert.AreEqual((amount * pricePer), price);
     }
+
+    [TestMethod]
+    public void Deals_ReturnsInt_Int()
+    {
+      int amount = 5;
+      Pastry testPastry = new Pastry(amount);
+      int price = testPastry.Deals();
+      Assert.AreEqual(typeof(int), price.GetType());
+    }
   }
 }

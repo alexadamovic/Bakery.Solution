@@ -15,5 +15,10 @@ namespace Bakery.Models
       return pricePer * Amount;
     }
 
+    public int Deals()
+    {
+      
+    }
+
   }
 }
