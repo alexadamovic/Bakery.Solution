@@ -12,5 +12,14 @@ namespace Bakery.Tests
       Pastry testPastry = new Pastry();
       Assert.AreEqual(typeof(Pastry), testPastry.GetType());
     }
+
+    [TestMethod]
+    public void GetAmount_ReturnsAmount_Int()
+    {
+      int amount = 5;
+      Pastry testPastry = new Pastry(amount);
+      int result = testPastry.Amount;
+      Assert.AreEqual(amount, result);
+    }
   }
 }
