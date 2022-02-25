@@ -30,5 +30,15 @@ namespace Bakery.Tests
       int price = testPastry.GetPrice();
       Assert.AreEqual(typeof(int), price.GetType());
     }
+
+    [TestMethod]
+    public void GetPrice_ReturnsPriceBasedOnAmount_Int()
+    {
+      int amount = 5;
+      int pricePer = 2;
+      Pastry testPastry = new Pastry(amount);
+      int price = testPastry.GetPrice();
+      Assert.AreEqual((amount * pricePer), price);
+    }
   }
 }
