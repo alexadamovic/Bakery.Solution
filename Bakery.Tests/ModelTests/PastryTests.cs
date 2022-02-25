@@ -49,5 +49,16 @@ namespace Bakery.Tests
       int discount = testPastry.Deals();
       Assert.AreEqual(typeof(int), discount.GetType());
     }
+
+    [TestMethod]
+    public void Deals_ReturnsDiscountBasedOnAmount_Int()
+    {
+      int amount = 5;
+      int discountAmount = 1;
+      int discountOccurs = 1;
+      Pastry testPastry = new Pastry(amount);
+      int discount = testPastry.Deals();
+      Assert.AreEqual((discountAmount * discountOccurs), discount);
+    }
   }
 }
