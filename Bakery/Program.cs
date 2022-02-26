@@ -18,15 +18,31 @@ namespace Bakery
         {
           case "Y":
             Console.WriteLine("Good decision my friend!\nHere is our pricing:\n\nBread - $5 per loaf w/ every 3rd loaf FREE\nPastries - $2 per pastry w/ $1 OFF every 3rd pastry\n(we're so generous, we know...)\n\nHow many loaves of bread would you like to buy?? (please enter a positive, whole number)");
-            int userBreadNumber = int.Parse(Console.ReadLine());
+            int userBreadNumber = 0;
+            try
+            {
+              userBreadNumber = int.Parse(Console.ReadLine());
+            }
+            catch (Exception)
+            {
+              Console.WriteLine("You entered something that wasn't just a whole number. I'm gonna assume you don't want any bread then");
+            }
 
             Bread userBread = new Bread(userBreadNumber);
             int breadFullPrice = userBread.GetPrice();
             int breadDiscount = userBread.Deals();
 
             Console.WriteLine("Okay gotcha! That'll be $" + breadFullPrice + " for the bread without the special deal (discount is applied at checkout after all).\nNow how many pastries would you like to buy?? (please enter a positive, whole number)");
-            int userPastryNumber = int.Parse(Console.ReadLine());
-
+            int userPastryNumber = 0;
+            try
+            {
+              userPastryNumber = int.Parse(Console.ReadLine());
+            }
+            catch (Exception)
+            {
+              Console.WriteLine("You entered something that wasn't just a whole number. I'm gonna assume you don't want any pastries then");
+            }
+            
             Pastry userPastry = new Pastry(userPastryNumber);
             int pastryFullPrice = userPastry.GetPrice();
             int pastryDiscount = userPastry.Deals();
